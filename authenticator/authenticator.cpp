@@ -31,8 +31,6 @@ int main() {
     std::cout << "Authenticator Code: " << authenticatorCode << std::endl;
 
     // Part II: Reporting the Authenticity of the Code Using Character by Character Comparison
-    std::cout << "\nPart II: Reporting the Authenticity of the Code Using Character by Character Comparison" << std::endl;
-
     if (messageCodeCharacter1 == k_cAuthenticatorCodeCharacter1 &&
         messageCodeCharacter2 == k_cAuthenticatorCodeCharacter2 &&
         messageCodeCharacter3 == k_cAuthenticatorCodeCharacter3) {
@@ -42,8 +40,6 @@ int main() {
     }
 
     // Part III: Reporting the Authenticity of the Code Using String Comparison
-    std::cout << "\nPart III: Reporting the Authenticity of the Code Using String Comparison" << std::endl;
-
     if (messageCode == authenticatorCode) {
         std::cout << "Concurrence: message is authentic" << std::endl;
     } else {
@@ -51,7 +47,6 @@ int main() {
     }
 
     // Part IV: Characterizing the Received Message Code
-    std::cout << "\nPart IV: Characterizing the Received Message Code" << std::endl;
 
     int checksum = (int(messageCodeCharacter1) + int(messageCodeCharacter2) + int(messageCodeCharacter3)) % 7;
 
